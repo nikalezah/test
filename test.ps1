@@ -55,20 +55,3 @@ while(1) {
 		Start-Sleep ($end - $now)
 	}
 }
-
-# function Export-Credential ($username, $password) {
-# 	New-Object System.Management.Automation.PSCredential $username, (ConvertTo-SecureString $password -AsPlainText -Force) `
-# 		| Export-CliXml -Path "$PSScriptRoot\credential.xml"
-# }
-
-# function Create-JiraSession {
-# 	Set-JiraConfigServer 'https://job-jira.otr.ru/'
-# 	New-JiraSession (Import-CliXml -Path "$PSScriptRoot\credential.xml")
-# }
-
-# Export-Credential $username $password
-# Create-JiraSession
-
-# function Update-Myself {
-# 	Invoke-WebRequest https://raw.githubusercontent.com/nikalezah/test/master/test.ps1 -OutFile $PSCommandPath
-# }
